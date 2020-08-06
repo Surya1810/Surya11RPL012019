@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:background="@color/Primary"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@mipmap/water" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="- - - WELCOME - - - "
+        android:fontFamily="@font/bungee"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        android:gravity="center"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Login"
+        android:fontFamily="@font/aclonica"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/txtuser"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="USERNAME"
+        android:textColorHint="@color/PrimaryDark"
+        app:backgroundTint="@color/colorAccent"/>
+
+    <EditText
+        android:id="@+id/txtpass"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="PASSWORD"
+        android:textColorHint="@color/PrimaryDark"
+        app:backgroundTint="@color/colorAccent"/>
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/PrimaryDark"
+        android:text="Login"
+        android:textColor="@color/Primary"/>
+
+
+
+
+
+
+</LinearLayout>
