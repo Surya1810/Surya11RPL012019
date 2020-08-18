@@ -46,11 +46,17 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), MainMenu.class));
                     finish();
                 }
-                if (txtuser.getText().toString().isEmpty() && txtpass.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please, Fill the Form Before Continue !", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Failed !, Try Again", Toast.LENGTH_SHORT).show();
-                }
+                    if (txtuser.getText().toString().isEmpty() && txtpass.getText().toString().isEmpty()) {
+                        Toast.makeText(MainActivity.this, "Please, Fill the Form Before Continue !", Toast.LENGTH_SHORT).show();
+                    } else if (txtuser.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(MainActivity.this, "Username is Wrong !", Toast.LENGTH_SHORT).show();
+                    } else if (txtpass.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(MainActivity.this, "Password is Wrong !", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Failed ! Try Again", Toast.LENGTH_SHORT).show();
+                    }
             }
 
     });
